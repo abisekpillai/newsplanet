@@ -3,96 +3,24 @@ import NewsItem from './NewsItem'
 
 export class News extends Component {
 
-  articles = [
-    {
-      "source": {
-        "id": null,
-        "name": "Hindustan Times"
-      },
-      "author": "HT Entertainment Desk",
-      "title": "Sandeep Singh shelves film on Tipu Sultan: ‘I sincerely apologise’ - Hindustan Times",
-      "description": "Producer Sandeep Singh has announced that the film he was planning to make on Tipu Sultan will no longer happen. | Bollywood",
-      "url": "https://www.hindustantimes.com/entertainment/bollywood/sandeep-singh-shelves-film-on-tipu-sultan-apologises-101690188960906.html",
-      "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/07/24/1600x900/sandeep_tipu_1690193988939_1690194541864.jpg",
-      "publishedAt": "2023-07-24T09:36:37Z",
-      "content": "Producer Sandeep Singh has announced that he's shelving the film on Tipu Sultan, the celebrated king of Mysore. He's attributed the reason to him, his family and friends getting threats from Tipu's f… [+1924 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Hindustan Times"
-      },
-      "author": "HT Entertainment Desk",
-      "title": "Internet reacts as Taimur asks for gulab jamun, speaks in Hindi in old video - Hindustan Times",
-      "description": "Kareena Kapoor and Saif Ali Khan were spotted at Mumbai airport with son Taimur some months ago. Their old video has now resurfaced, and is winning hearts. | Bollywood",
-      "url": "https://www.hindustantimes.com/entertainment/bollywood/taimur-ali-khan-gulab-jamun-airport-video-hindi-101690178284213.html",
-      "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/07/24/1600x900/kareena_1690178893443_1690178893758.jpg",
-      "publishedAt": "2023-07-24T06:52:14Z",
-      "content": "Kareena Kapoor is currently on a family vacation in Europe with Saif Ali Khan and their kids Taimur Ali Khan and Jehangir Ali Khan or Jeh. Now, a throwback video from earlier this year has surfaced o… [+2691 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Bollywood Hungama"
-      },
-      "author": "Bollywood Hungama",
-      "title": "Sunny Deol’s second son Rajveer Deol and Poonam Dhillon’s daughter Paloma Thakeria to mark their debut with Rajshri Productions’ Dono - Bollywood Hungama",
-      "description": "Sunny Deol’s second son Rajveer Deol and Poonam Dhillon’s daughter Paloma Thakeria to mark their debut with Rajshri Productions’ Dono. Bollywood News: Latest Bollywood News, Bollywood News Today, Bollywood Celebrity News, Breaking News, Celeb News, Celebritie…",
-      "url": "https://www.bollywoodhungama.com/news/bollywood/sunny-deols-second-son-rajveer-deol-poonam-dhillons-daughter-paloma-thakeria-mark-debut-rajshri-productions-dono/",
-      "urlToImage": "https://media5.bollywoodhungama.in/wp-content/uploads/2023/07/Sunny-Deols-second-son-Rajveer-Deol-and-Poonam-Dhillons-daughter-Paloma-620.jpg",
-      "publishedAt": "2023-07-24T06:42:53Z",
-      "content": null
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Hindustan Times"
-      },
-      "author": "HT Entertainment Desk",
-      "title": "Kareena poses with Taimur and Jehangir 'under a rainbow', gives glimpse of Saif - Hindustan Times",
-      "description": "Kareena Kapoor, Saif Ali Khan, Taimur Ali Khan and Jehangir Ali Khan are in Europe enjoying the summer. See their photos here. | Bollywood",
-      "url": "https://www.hindustantimes.com/entertainment/bollywood/kareena-kapoor-saif-ali-khan-taimur-ali-khan-jehangir-ali-khan-vacation-pics-101690176448850.html",
-      "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/07/24/1600x900/Kareena_Kapoor_1690178629910_1690178639932.jpg",
-      "publishedAt": "2023-07-24T06:16:38Z",
-      "content": "Actor Kareena Kapoor has been treating her fans and followers to pictures from her Europe vacation. She travelled to Europe a few weeks ago with husband-actor Saif Ali Khan and their children Taimur … [+2280 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Hindustan Times"
-      },
-      "author": "HT Entertainment Desk",
-      "title": "Shatrughan Sinha shares glimpse of get-together with Mumtaz, Siddharth Kak - Hindustan Times",
-      "description": "Siddharth Kak is known for hosting hit TV show Surabhi, which used to air on Doordarshan. He joined Shatrughan Sinha and Mumtaz at the former's house. | Bollywood",
-      "url": "https://www.hindustantimes.com/entertainment/bollywood/shatrughan-sinha-get-together-with-mumtaz-siddharth-kak-of-surabhi-101690168321769.html",
-      "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/07/24/1600x900/shatrughan_sinha_mumtaz_gettogether_1690168315199_1690168315415.jpg",
-      "publishedAt": "2023-07-24T05:21:29Z",
-      "content": "Shatrughan Sinha and wife Poonam Sinha recently hosted a get-together to celebrate their wedding anniversary as well as remember late legendary actor Sanjeev Kumar. The gathering also had veteran act… [+2504 chars]"
-    },
-    {
-      "source": {
-        "id": "the-times-of-india",
-        "name": "The Times of India"
-      },
-      "author": "etimes.in",
-      "title": "Amitabh Bachchan begins shooting for Kaun Banega Crorepati 15; shares pics of 'rehearsing again and again - Times of India",
-      "description": "Bollywood superstar Amitabh Bachchan has started shooting for KBC 15. The actor shared pictures from the sets on Sunday (July 23) in which he is seen",
-      "url": "https://timesofindia.indiatimes.com/tv/news/hindi/amitabh-bachchan-begins-shooting-for-kaun-banega-crorepati-15-shares-pics-of-rehearsing-again-and-again-from-the-sets/articleshow/102067546.cms",
-      "urlToImage": "https://static.toiimg.com/thumb/msid-102067546,width-1070,height-580,imgsize-912664,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
-      "publishedAt": "2023-07-24T03:53:00Z",
-      "content": "When Amitabh Bachchan refused to hand over his winning amount to his son Abhishek Bachchan; readAmitabh Bachchan, who has been hosting the show Kaun Banega Crorepati for 12 years straight, will be ma… [+193 chars]"
-    }
-  ]
-
   constructor(){
     super();
-    console.log("This is a constructor");
     this.state = {
-      articles : this.articles,
+      articles : [],
       loading : false
     }
   }
+
+  async componentDidMount(){
+    let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=8362708e62074e7cac98b7b12db02254";
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    console.log(parsedData);
+    this.setState({ articles : parsedData.articles})
+  }
+
   render() {
+    console.log("render");
     return (
       <div className='container my-3'>
         <h2>NewsPlanet - Top Headlines</h2>
@@ -100,10 +28,9 @@ export class News extends Component {
         <div className="row">
         {this.state.articles.map((element)=>{
           return <div className="col-md-4" key={element.url}>
-                    <NewsItem title={element.title.slice(0,70)} description={element.description.slice(0,105)} imageUrl={element.urlToImage} newsUrl={element.url}/>
+                    <NewsItem title={element.title?element.title.slice(0,70):""} description={element.description?element.description.slice(0,105):""} imageUrl={element.urlToImage} newsUrl={element.url}/>
                  </div>
         })}
-          
         </div> 
       </div>
     )
